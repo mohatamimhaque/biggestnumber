@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+
+  }
+
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-bg);
+  border-radius: 10px;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color:#e6e6fa;
+    overflow: hidden;
+    
+}
+
+
+.aps-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:80%;
+    width: 80%;
+}
+#bg-gradient{
+    position: absolute;
+    height: 280px;
+    width:470px;
+    background-image: linear-gradient(45deg,#fff0f5,#f8f8ff,#e0ffff,#f0fff0,#e6e6fa );
+}
+#wrapper{
+    position: relative;
+    background: rgba(255,255,255,0.1);
+    height: 300px;
+    width:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow:0 25px 25px rgba(0,0,0,0.1);
+    border:1px solid rgba(255,255,255,0.25);
+    border-right:1px solid rgba(255,255,255,0.1);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    font-size: 15px;
+    font-weight: 500;
+    padding:40px;
+    overflow-x: scroll;
+    z-index: 50;
+   
+}
+@media only screen and (max-width: 600px) {
+ .aps-wrapper{
+      width:90%
+  }
+}
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 10px;
+  height:6px
+}
+#wrapper h4{
+    text-align: center;
+    font-size: 28px;
+    background: -webkit-linear-gradient(45deg,rgb(236, 154, 29), rgb(255, 132, 247),rgb(242, 244, 102),rgb(162, 238, 254),rgb(185, 229, 128));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-bg);
+  border-radius: 10px;
+}
+.form{
+    width:100%;
+    height: auto;
+    margin: auto 0;
+}
+.inputGroup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px; 
+}
+.inputGroup:last-child{
+    padding-bottom: 0;
+}
+
+.inputGroup label{
+    font-size: 16px;
+    color: #170557;
+    cursor: pointer;
+}
+.inputGroup input{
+    outline: none;
+    padding:8px 10px;
+    border:none;
+    font-size: 16px;
+    width:200px;
+    border-radius: 5px;
+    background: none;
+    box-shadow: inset 2px 2px 5px lightblue,
+                inset -2px -2px 5px rgba(244, 182, 254, 0.253),
+                0px 0px 12px rgb(225, 225, 225);
+}
+
+.inputGroup #sumbitBtn{
+    width:220px;
+    padding:5px 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background: transparent;
+    backdrop-filter: 15px;
+    box-shadow: 0 0 5px rgb(235, 234, 234),
+                0 0 2px rgb(189, 189, 189);
+    background: -webkit-linear-gradient(rgb(24, 186, 255), rgb(251, 6, 235));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    margin-top: 5px;
+
+}
+.warning{
+    font-size: 12px;
+    color: #ff0101;
+    text-align: right;
+    margin:2px;
+    margin-right: 8px;
+}
+.warning strong{
+    color: #ff9e01;
+}
+.resultShow{
+    position: absolute;
+    width:400px;
+    height:100px;
+    background-color: #e0ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    border-radius: 5px;
+    box-shadow: 0 0 16px rgb(238, 238, 238),
+                0 0 8px rgb(238, 238, 238),
+                0 0 24px rgb(238, 238, 238);
+    transition: 0.3s ease-in;
+    display:none
+
+}
+.resultShow p{
+    font-size:24px;
+    font-weight:600;
+  background: -webkit-linear-gradient(45deg,rgb(132, 190, 232), rgb(132, 171, 255),rgb(244, 102, 180),rgb(162, 238, 254),rgb(90, 209, 248));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+
+}
+.close{
+    width:24px;
+    height:24px;
+    position: absolute;
+    top:12px;
+    right:5px;
+    cursor: pointer;
+}
+.close .bar{
+    position: relative;
+    width:18px;
+    height:2.5px;
+}
+.close .bar:after,
+.close .bar:before{
+    content: '';
+    position: absolute;
+    width:inherit;
+    height:inherit;
+    background: #1c1c1c;
+    
+}
+.close .bar:after{
+    transform: rotate(45deg);
+}
+.close .bar:before{
+    transform: rotate(-45deg);
+}
+.copy{
+    position: absolute;
+    bottom:2px;
+    right:8px;
+    font-size: 14px;
+    background: -webkit-linear-gradient(45deg,rgb(8, 152, 255), rgb(0, 78, 246),rgb(244, 102, 180),rgb(2, 213, 255),rgb(55, 255, 6));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-family: 'Dancing Script', cursive;
+}
